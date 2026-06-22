@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <header>const API_KEY = "6e8e668bd7e996aadd210a2d0f23bde2";
+      <h1>☀️ Weather Dashboard</h1>
+    </header>
+
+    <form id="searchForm" class="search-form">
+      <input type="text" id="cityInput" placeholder="Enter city name (e.g., Chennai, London)" required autofocus>
+      <button type="submit" id="searchBtn">Search</button>
+    </form>
+
+    <div id="weatherCard" class="weather-card hidden">
+      <div class="weather-main">
+        <h2 id="cityName"></h2>
+        <p id="weatherDesc" class="weather-desc"></p>
+      </div>
+      <div class="weather-details">
+        <div class="detail">
+          <span class="detail-label">Temperature</span>
+          <span class="detail-value" id="temperature">--</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Humidity</span>
+          <span class="detail-value" id="humidity">--</span>
+        </div>
+        <div class="detail">
+          <span class="detail-label">Wind Speed</span>
+          <span class="detail-value" id="windSpeed">--</span>
+        </div>
+      </div>
+      <div class="weather-icon-wrap">
+        <img id="weatherIcon" src="" alt="">
+      </div>
+    </div>
+
+    <div id="errorMsg" class="error hidden"></div>
+    <div id="loading" class="loading hidden">Loading...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
